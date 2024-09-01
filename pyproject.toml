@@ -1,0 +1,26 @@
+[project]
+name = "docqa"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.6.3",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle
+    "F",  # Pyflakes
+    "UP",  # pyupgrade
+    "B",  # flake8-bugbear
+    "C",  # flake8-comprehensions
+    "SIM",  # flake8-simplify
+    "I",  # isort
+]
+
+[tool.ruff.format]
+docstring-code-format = true
