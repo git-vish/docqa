@@ -1,10 +1,18 @@
 [project]
 name = "docqa"
 version = "0.1.0"
-description = "Add your description here"
+description = "DocQA: Document Q&A using LangChain and Google GenAI."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "langchain>=0.2.16",
+    "langchain-community>=0.2.16",
+    "langchain-google-genai>=1.0.10",
+    "python-dotenv>=1.0.1",
+    "streamlit>=1.38.0",
+    "pypdf>=4.3.1",
+    "faiss-cpu>=1.8.0.post1",
+]
 
 [tool.uv]
 dev-dependencies = [
