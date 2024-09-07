@@ -24,14 +24,16 @@ def init_session_state():
             llm=st.session_state.llm,
             prompt=st.session_state.qa_prompt,
         )
+        st.session_state.retrieval_chain = None
 
         st.session_state.chat_history = []
 
 
-def clear_vectorstore():
+def clear_session_state():
     """Clear the vector store and chat history from the session state."""
-    st.session_state["vectorstore"] = None
-    st.session_state["chat_history"] = []
+    st.session_state.vectorstore = None
+    st.session_state.chat_history = []
+    st.session_state.retrieval_chain = None
 
 
 def update_chat_history(question: str, answer: str):
