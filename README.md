@@ -1,6 +1,11 @@
 # DocQA
 
+---
+
 This project implements a document-based knowledge base and Q&A system using Streamlit, LangChain, Google GenAI, and FAISS.
+
+![DocQA Screenshot](images/screenshot.png)
+
 
 ## Features
 
@@ -11,7 +16,7 @@ This project implements a document-based knowledge base and Q&A system using Str
 ## Setup
 
 1. Clone the repository
-2. Install dependencies: `uv install`
+2. Install dependencies: `uv install` or `pip install -r requirements.txt`
 3. Set up environment variables in `.env` file
 4. Run the application: `streamlit run src/main.py`
 
