@@ -32,7 +32,7 @@ def init_session_state():
 def clear_session_state():
     """Clear the vector store and chat history from the session state."""
     st.session_state.vectorstore = None
-    st.session_state.chat_history = []
+    st.session_state.chat_history.clear()
     st.session_state.retrieval_chain = None
 
 

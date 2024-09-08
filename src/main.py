@@ -8,7 +8,7 @@ from langchain.chains.retrieval import create_retrieval_chain
 from document_processor import process_document
 from utils import clear_session_state, init_session_state, update_chat_history
 
-st.set_page_config(page_title="DocQA | Ask the docs", layout="wide")
+st.set_page_config(page_title="DocQA | Ask the docs", layout="wide", page_icon="📚")
 
 with st.spinner("Initializing..."):
     load_dotenv()
@@ -20,7 +20,9 @@ st.title("DocQA")
 with st.sidebar:
     st.header("Document Upload")
     file = st.file_uploader(
-        "Choose a PDF file", type=["pdf"], on_change=clear_session_state
+        "Choose a file",
+        type=["pdf", "doc", "docx", "txt"],
+        on_change=clear_session_state,
     )
 
     if file and not st.session_state.vectorstore:
